@@ -41,5 +41,10 @@ public class Usuario {
 			return false;
 		return true;
 	}
+
+	public void setData(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

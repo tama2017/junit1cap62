@@ -47,9 +47,20 @@ public class UC06CadastrarLivro {
 			assertEquals("ISBN invalido", e.getMessage());
 		}
 	}
+	
+	@BeforeClass
+	public static void setUpBeforeClas1s() throws Exception {
+	livro = new Livro();
+	}
+	@AfterClass
+	public static void tearDownAfterClass1() throws Exception {
+	}
+	@Test(expected=RuntimeException.class)
+	public void CT01UC06CadastrarLivro_com_isbn_invalido_branco1() {
+	livro.setIsbn("");
+	}
+	@Test(expected=RuntimeException.class)
+	public void CT02UC06CadastrarLivro_com_isbn_invalido_nulo1() {
+	livro.setIsbn(null);
+	}
 }
-
-
-
-
-
